@@ -13,8 +13,11 @@ The folder is composed of:
 - `lib`: a folder containing a code that computes the dihedral angles from the following repository :(https://github.com/EvryRNA/rna_angles_prediction_dssr/tree/main)
 - `requirements.txt` contains the necessary python library versions.
 - `src`: a folder with all our implementations.
+  
           - `select_chainA` : Selection of the chain A only when the RNA is multi-stranded, the results are the pdb files in data/TrainingSet/chainA and in                      data/TestSet/chainA and are used for the computation of the angles with the dssr tool.
+  
           - `distribution.py`: Visualization of the distribution of delta angles from CSV files in the `angles/TestSet` and `angles/TrainingSet`.
+  
           - `classication.py` : Classification according to predefined intervals based on the values in the 'delta' column from CSV files in the                                `angles/TestSet` and `angles/TrainingSet`.
           - `one_hot_encoding.py` : Creation of one-hot encoding matrices from genetic sequences extracted from CSV files in the `angles/TestSet` and                           `angles/TrainingSet` directories. The resulting matrices are then saved in the directories `angles/TestSetMatrix` and                                         `angles/TrainingSetMatrix`, respectively. (optional)
           - `all_one_hot_encoding.py`: Creation of a 2 unique one-hot encoding matrices from genetic sequences extracted from CSV files in the                                 'angles/TestSet' and 'angles/TrainingSet' directories, respectively. The resulting matrices are then saved in the directories                                 'angles/TestSetMatrix' and 'angles/TrainingSetMatrix', respectively.
