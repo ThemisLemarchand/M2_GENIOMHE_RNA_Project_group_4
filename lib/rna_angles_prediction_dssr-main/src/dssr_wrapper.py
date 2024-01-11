@@ -182,8 +182,11 @@ class DSSRWrapper:
         )
         return parser.parse_args()
 
-
 if __name__ == "__main__":
     args = DSSRWrapper.get_arguments()
     dssr_wrapper = DSSRWrapper(**vars(args))
-    dssr_wrapper.run(args.input_path, args.output_path, args.to_csv)
+    # input path is input dir
+    # same for output path
+    for path in os.listdir(args.input_path):
+        output_name = path.replace('.pdb','.csv')
+        dssr_wrapper.run(os.path.join(args.input_path, path), os.path.join(args.output_path, output_name), args.to_csv)
