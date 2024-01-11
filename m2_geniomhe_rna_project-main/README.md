@@ -7,6 +7,7 @@ The folder is composed of:
         The `sample` folder contains a `.fasta` file that should be used to do inference for the delivery. 
         The `SPOT-RNA-1D` folder contains the predictions from `SPOT-RNA-1D` for the Training set (`data/SPOT-RNA-1D/training.json`) and Test set (`data/SPOT-RNA-1D/test.json`).
 - `lib`: a folder containing a code that computes the dihedral angles from the following repository :(https://github.com/EvryRNA/rna_angles_prediction_dssr/tree/main)
+  The `dssr_wrapper.py` file has been modified in order to take a folder in argument and execute the program on all files in directory.
 - `requirements.txt` contains the necessary python library versions.
 - `src`: a folder with all our implementations.
             - `select_chainA` : Selection of the chain A only when the RNA is multi-stranded, the results are the pdb files in data/TrainingSet/chainA and in                      data/TestSet/chainA and are used for the computation of the angles with the dssr tool.  
